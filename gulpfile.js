@@ -120,24 +120,24 @@ exports.default = build;
 
 var ghpages = require('gh-pages');
 
-// ghpages.publish('dist', function(err) {});
+ghpages.publish('dist', function(err) {});
 
 
-module.exports = function(gulp, gp, config) {
-  'use strict';
-
-  gulp.task('ghpages', function(done) {
-
-    ghPages.publish(config.paths.destRoot, {
-      dotfiles: true,
-      branch:   'gh-pages',
-      message:  'Release v' + config.version,
-      // repo:     config.repository.url,
-      logger: function(message) {
-        gp.util.log(message);
-      }
-    }, done);
-
-  });
-
-};
+// module.exports = function(gulp, gp, config) {
+//   'use strict';
+//
+//   gulp.task('ghpages', function(done) {
+//
+//     ghPages.publish(config.paths.destRoot, {
+//       dotfiles: true,
+//       branch:   'gh-pages',
+//       message:  'Release v' + config.version,
+//       // repo:     config.repository.url,
+//       logger: function(message) {
+//         gp.util.log(message);
+//       }
+//     }, done);
+//
+//   });
+//
+// };
