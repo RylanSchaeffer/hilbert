@@ -117,3 +117,7 @@ exports.vendor = vendor;
 exports.build = build;
 exports.watch = watch;
 exports.default = build;
+
+var ghpages = require('gh-pages');
+
+ghpages.publish('dist', function(err) {});
