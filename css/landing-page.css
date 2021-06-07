@@ -18,14 +18,14 @@ h6 {
   font-weight: 700;
 }
 
-/*header.masthead {*/
-/*  position: relative;*/
-/*  background-color: #343a40;*/
-/*  background: url("../img/bg-masthead.jpg") no-repeat center center;*/
-/*  background-size: cover;*/
-/*  padding-top: 8rem;*/
-/*  padding-bottom: 8rem;*/
-/*}*/
+h1.about-us {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.about-us .about-us-item {
+  max-width: 18rem;
+}
 
 header.masthead {
   position: relative;
