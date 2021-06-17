@@ -18,15 +18,6 @@ h6 {
   font-weight: 700;
 }
 
-h1.about-us {
-  padding-top: 7rem;
-  padding-bottom: 7rem;
-}
-
-.about-us .about-us-item {
-  max-width: 18rem;
-}
-
 header.masthead {
   position: relative;
   background-color: #343a40;
