@@ -21,8 +21,25 @@
   <!-- Custom styles for this template -->
   <link href="css/landing-page.min.css" rel="stylesheet">
   <!-- Load plotly.js into the DOM -->
-  <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+  <!--  <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>-->
+  <script src='https://cdn.plot.ly/plotly-2.0.0.min.js'></script>
 
+  <script>
+    var data = [
+      {
+        x: [0, 1, 2],
+        y: [6, 10, 2],
+        error_y: {
+          type: 'data',
+          array: [1, 2, 3],
+          visible: true
+        },
+        type: 'scatter'
+      }
+    ];
+    Plotly.newPlot('myDiv', data);
+
+  </script>
 </head>
 
 <body>
@@ -36,35 +53,12 @@
     </div>
   </nav>
 
-<!--  <div id='myDiv'>&lt;!&ndash; Plotly chart will be drawn inside this DIV &ndash;&gt;</div>-->
-<!--  <script>-->
-<!--    var monthly_cost_if_renting = 3559;-->
-<!--    var monthly_cost_if_owning = 3459;-->
-
-
-<!--    var trace1 = {-->
-<!--      x: [1, 2, 3, 4],-->
-<!--      y: [10, 15, 13, 17],-->
-<!--      type: 'scatter'-->
-<!--    };-->
-
-<!--    var trace2 = {-->
-<!--      x: [1, 2, 3, 4],-->
-<!--      y: [16, 5, 11, 9],-->
-<!--      type: 'scatter'-->
-<!--    };-->
-
-<!--    var data = [trace1, trace2];-->
-
-<!--    Plotly.newPlot('myDiv', data, sliders);-->
-<!--  </script>-->
-
   <!-- Masthead -->
   <header class="masthead text-white text-center">
     <div class="container">
       <div class="row">
         <div class="col-xl-9 mx-auto">
-          <h1 class="mb-5">Stop Hemorrhaging Money to Rent</h1>
+          <h1 class="mb-5">Making Bay Area Housing Affordable</h1>
           <h2>Co-owning as easy and risk-free as renting</h2><br><br>
         </div>
         <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
@@ -152,7 +146,7 @@
       <h2 class="mb-5">What people are saying...</h2>
       <div class="row">
         <div class="col-lg-4">
-          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+          <div class="testimonial-item mx-autto mb-5 mb-lg-0">
             <img class="img-fluid rounded-circle mb-3" src="img/testimonials-1.jpg" alt="">
             <h5>Margaret E.</h5>
             <p class="font-weight-light mb-0">"This is fantastic! Thanks so much guys!"</p>
@@ -173,6 +167,32 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="testimonials text-center bg-light">
+    <div class="container">
+    <div id='myDiv'><!-- Plotly chart will be drawn inside this DIV --></div>
+    <script>
+      var monthly_cost_if_renting = 3559;
+      var monthly_cost_if_owning = 3459;
+
+
+      var trace1 = {
+        x: [1, 2, 3, 4],
+        y: [10, 15, 13, 17],
+        type: 'scatter'
+      };
+
+      var trace2 = {
+        x: [1, 2, 3, 4],
+        y: [16, 5, 11, 9],
+        type: 'scatter'
+      };
+      var data = [trace1, trace2];
+      Plotly.newPlot('myDiv', data, sliders);
+    </script>
+
     </div>
   </section>
 
