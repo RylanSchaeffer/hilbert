@@ -22,24 +22,8 @@
   <link href="css/landing-page.min.css" rel="stylesheet">
   <!-- Load plotly.js into the DOM -->
   <!--  <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>-->
-  <script src='https://cdn.plot.ly/plotly-2.0.0.min.js'></script>
+  <script src="https://cdn.plot.ly/plotly-2.1.0.min.js"></script>
 
-  <script>
-    var data = [
-      {
-        x: [0, 1, 2],
-        y: [6, 10, 2],
-        error_y: {
-          type: 'data',
-          array: [1, 2, 3],
-          visible: true
-        },
-        type: 'scatter'
-      }
-    ];
-    Plotly.newPlot('myDiv', data);
-
-  </script>
 </head>
 
 <body>
@@ -174,9 +158,9 @@
     <div class="container">
     <div id='myDiv'><!-- Plotly chart will be drawn inside this DIV --></div>
     <script>
+      myDiv = document.getElementById('myDiv');
       var monthly_cost_if_renting = 3559;
       var monthly_cost_if_owning = 3459;
-
 
       var trace1 = {
         x: [1, 2, 3, 4],
@@ -190,7 +174,7 @@
         type: 'scatter'
       };
       var data = [trace1, trace2];
-      Plotly.newPlot('myDiv', data, sliders);
+      Plotly.newPlot("myDiv", data);
     </script>
 
     </div>

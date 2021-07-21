@@ -33,6 +33,7 @@
         "bootstrap": "5.0.1",
         "help": "^3.0.2",
         "jquery": "3.6.0",
+        "plotly.js-dist": "^2.1.0",
         "simple-line-icons": "2.5.5",
         "xmlhttprequest-ssl": ">=1.6.2"
     },
